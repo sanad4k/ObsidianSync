@@ -3,8 +3,8 @@
 # Automated Obsidian Sync on Android with Termux and Git
 
 who is this for :
-    you have obsidian and want a no cost way to sync between your phone and computer
-    thanks to GIT plugin by  for computer it works fine but for phones they are not 
+    You have obsidian and want a no-cost way to sync between your phone and computer
+    Thanks to the GIT plugin by Vinzent , it works fine on the computer, but for phones they are not 
     usable so this approach solves it by using termux to run proper git on phones 
     and use it to sync notes on regular basis 
 
@@ -156,7 +156,7 @@ For the background sync to work, remember to:
 
 ## How the Sync Logic Works (Important\!)
 
-philosopy : remote is always right 
+philosophy: remote is always right 
 
 
 The `sync-vault.sh` script uses a specific, robust Git workflow to prevent getting stuck on conflicts:
@@ -172,3 +172,7 @@ The `sync-vault.sh` script uses a specific, robust Git workflow to prevent getti
 4.  **Push the Merged Result**: Finally, it uploads the clean, merged history back to the server.
 
 This strategy makes the script extremely reliable for automation, but be aware of its behavior: if you edit the exact same sentence on two devices before a sync, the change from the last device to push (e.g., your computer) will win, and the conflicting change on your phone will be overwritten. For most single-user workflows, this is a safe and desirable way to maintain consistency.
+
+Special mention and credits to work done by Vinzent on the obsidian gitplugin 
+https://github.com/Vinzent03/obsidian-git#
+    
